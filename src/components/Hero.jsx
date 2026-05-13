@@ -36,7 +36,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
-                className="font-display font-extrabold text-5xl md:text-7xl text-white leading-tight mb-6"
+                className="font-display font-extrabold text-5xl md:text-7xl text-brand-text leading-tight mb-6"
             >
                 Vous cherchez un <br />développeur web ?
             </motion.h1>
@@ -47,7 +47,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
-                className="font-body text-white/60 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
+                className="font-body text-brand-muted text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
             >
                 Passionné par le code depuis plusieurs années, je conçois et développe
                 des applications web modernes de A à Z. À l'aise aussi bien sur le
@@ -65,13 +65,13 @@ export default function Hero() {
             >
 
                 <a href="#projects"
-                className="px-8 py-3 bg-violet hover:bg-violet-light text-white font-body font-medium rounded-lg transition-colors duration-300"
+                className="px-8 py-3 bg-violet hover:bg-violet-light text-brand-text font-body font-medium rounded-lg transition-colors duration-300"
                 >
                 Voir mes projets
             </a>
 
             <a href="#contact"
-            className="px-8 py-3 border border-white/20 hover:border-lime hover:text-lime text-white/70 font-body font-medium rounded-lg transition-colors duration-300"
+            className="px-8 py-3 border border-brand-border hover:border-lime hover:text-lime text-brand-muted font-body font-medium rounded-lg transition-colors duration-300"
             >
             Me contacter
         </a>

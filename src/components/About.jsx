@@ -16,10 +16,10 @@ export default function About() {
                         transition={{ duration: 0.6 }}
                         className="flex flex-col justify-start"
                     >
-                        <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-8">
+                        <h2 className="font-display font-bold text-4xl md:text-5xl text-brand-text mb-8">
                             À propos
                         </h2>
-                        <p className="font-body text-white/70 text-lg leading-relaxed">
+                        <p className="font-body text-brand-muted text-lg leading-relaxed">
                             Développeur web basé à Rouen, je me suis orienté vers
                             l'informatique dès le lycée avec un Bac STI2D, avant de
                             poursuivre en BTS Systèmes Numériques puis en Licence
@@ -45,7 +45,7 @@ export default function About() {
                             <img
                                 src="/aime.adjassa.jpg"
                                 alt="Aimé Adjassa"
-                                className="relative w-full h-auto object-cover rounded-2xl border-2 border-dark-border"
+                                className="relative w-full h-auto object-cover rounded-2xl border-2 border-brand-border"
                             />
                         </div>
                     </motion.div>

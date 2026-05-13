@@ -25,7 +25,7 @@ export default function Navbar() {
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
                 scrolled
-                    ? 'bg-dark/90 backdrop-blur-md border-b border-dark-border'
+                    ? 'bg-brand-bg/90 backdrop-blur-md border-b border-brand-border'
                     : 'bg-transparent'
             }`}
         >
@@ -33,10 +33,10 @@ export default function Navbar() {
 
                 {/* Logo */}
                 <a href="#hero" className="font-display font-bold text-xl group">
-          <span className="text-white group-hover:text-lime transition-colors duration-300">
+          <span className="text-brand-text group-hover:text-lime transition-colors duration-300">
             A
           </span>
-                    <span className="text-lime group-hover:text-white transition-colors duration-300">
+                    <span className="text-lime group-hover:text-brand-text transition-colors duration-300">
             A
           </span>
                 </a>
@@ -46,7 +46,7 @@ export default function Navbar() {
                     {links.map((link) => (
                         <li key={link.href}>
                             <a href={link.href}
-                                className="font-body text-sm text-white/70 hover:text-lime transition-colors duration-300 relative group"
+                                className="font-body text-sm text-brand-muted hover:text-lime transition-colors duration-300 relative group"
                                 >
                                 {link.label}
                                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-lime group-hover:w-full transition-all duration-300" />
@@ -75,7 +75,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="md:hidden bg-dark/95 backdrop-blur-md border-b border-dark-border"
+                        className="md:hidden bg-brand-bg/95 backdrop-blur-md border-b border-brand-border"
                     >
                         <ul className="flex flex-col px-6 py-4 gap-4">
                             {links.map((link) => (
@@ -83,7 +83,7 @@ export default function Navbar() {
 
                                     <a href={link.href}
                                     onClick={closeMenu}
-                                    className="block font-body text-white/70 hover:text-lime transition-colors duration-300 py-1"
+                                    className="block font-body text-brand-muted hover:text-lime transition-colors duration-300 py-1"
                                     >
                                     {link.label}
                                 </a>

@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-dark text-white font-body;
+    @apply bg-brand-bg text-brand-text font-body;
   }
 
   h1, h2, h3 {
@@ -14,7 +14,7 @@
   }
 
   ::selection {
-    @apply bg-lime text-dark;
+    @apply bg-lime text-brand-text;
   }
 
   ::-webkit-scrollbar {
@@ -22,16 +22,10 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-dark;
+    @apply bg-brand-bg;
   }
 
   ::-webkit-scrollbar-thumb {
     @apply bg-violet rounded-full;
-  }
-}
-
-@layer utilities {
-  .gradient-text {
-    @apply bg-gradient-to-r from-violet-light to-lime bg-clip-text text-transparent;
   }
 }

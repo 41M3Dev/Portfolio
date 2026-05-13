@@ -16,10 +16,12 @@ export default {
           DEFAULT: '#A3E635',
           dark: '#65A30D',
         },
-        dark: {
-          DEFAULT: '#0A0A0F',
-          card: '#12121A',
-          border: '#1E1E2E',
+        brand: {
+          bg: '#F8F8F8',
+          card: '#FFFFFF',
+          border: '#E5E5E5',
+          text: '#1A1A1A',
+          muted: '#6B7280',
         }
       },
       fontFamily: {
