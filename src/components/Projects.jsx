@@ -3,17 +3,19 @@ import { motion } from 'framer-motion'
 const projects = [
     {
         id: 1,
-        title: 'Projet à venir',
-        description: 'Ce projet sera bientôt disponible.',
-        tags: ['React', 'Node.js', 'MySQL'],
-        link: null,
+        title: 'Mini ERP',
+        description: "Application de gestion d'entreprise complète : employés, congés, salaires, finances, stocks, fournisseurs et commandes. Authentification avec rôles (superadmin, admin, RH, finance, manager...).",
+        tags: ['Laravel', 'PHP', 'MySQL', 'Docker'],
+        link: 'https://erp.adjassaweb.fr',
+        image: '/project/erp.png',
     },
     {
         id: 2,
-        title: 'Projet à venir',
-        description: 'Ce projet sera bientôt disponible.',
-        tags: ['Laravel', 'Vue.js', 'PostgreSQL'],
-        link: null,
+        title: 'Carte',
+        description: "Application web de recherche et de découverte de restaurants sur une carte interactive. Localisation en temps réel, filtres de recherche et affichage des établissements à proximité.",
+        tags: ['React', 'JavaScript', 'Vite'],
+        link: 'https://carte.adjassaweb.fr',
+        image: '/project/carte.png',
     },
 ]
 
@@ -42,12 +44,15 @@ export default function Projects() {
                             transition={{ delay: i * 0.15, duration: 0.5 }}
                             className="relative rounded-2xl overflow-hidden group cursor-pointer h-72"
                         >
-                            {/* Image / fond placeholder */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-violet/10 to-lime/10 flex items-center justify-center">
-                <span className="font-display font-bold text-2xl text-brand-muted/20">
-                  Coming soon
-                </span>
-                            </div>
+                            {/* Image */}
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="absolute inset-0 w-full h-full object-cover"
+                            />
+
+                            {/* Overlay sombre permanent */}
+                            <div className="absolute inset-0 bg-black/20" />
 
                             {/* Overlay au hover */}
                             <div className="absolute inset-0 bg-violet/90 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -71,19 +76,21 @@ export default function Projects() {
                                     ))}
                                 </div>
 
-                                <button
-                                    disabled={!project.link}
-                                    className="w-fit flex items-center gap-2 text-lime text-sm font-body font-medium"
-                                >
-                                    Bientôt disponible
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
-                                </button>
 
-                            </div>
+                                <a href={project.link}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="w-fit flex items-center gap-2 text-lime text-sm font-body font-medium"
+                                >
+                                Voir le projet
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+
+                        </div>
                         </motion.div>
-                    ))}
+                        ))}
                 </div>
 
             </div>
